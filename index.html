@@ -4,41 +4,79 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My GitHub Page</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      font-family: system-ui, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-      background: #f5f5f5;
-      color: #333;
-    }
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-    p {
-      font-size: 1.1rem;
-      color: #555;
-    }
-    a {
-      color: #007bff;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <title>Braden Watkins | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <h1>Hello, GitHub Pages!</h1>
-  <p>Your site is live 🎉</p>
-  <p>Edit <code>index.html</code> to get started.</p>
-  <p><a href="https://github.com/">View on GitHub</a></p>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Header -->
+  <header class="bg-white shadow-sm sticky top-0 z-10">
+    <div class="max-w-5xl mx-auto flex items-center justify-between p-4">
+      <h1 class="text-2xl font-bold text-blue-600">Braden Watkins</h1>
+      <nav class="space-x-6">
+        <a href="#about" class="text-gray-700 hover:text-blue-600">About</a>
+        <a href="#resume" class="text-gray-700 hover:text-blue-600">Résumé</a>
+        <a href="mailto:braden@example.com" class="text-gray-700 hover:text-blue-600">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Intro Section -->
+
+  <section id="about" class="max-w-5xl mx-auto px-4 py-16 text-center">
+    <h2 class="text-3xl font-semibold mb-4">Hello, I’m Braden Watkins 👋</h2>
+    <p class="text-lg text-gray-600 leading-relaxed mb-6">
+      I’m a developer passionate about building functional, well-crafted software —
+      from backend systems and APIs to interactive game mechanics. I enjoy working
+      on meaningful projects that blend creativity with solid engineering.
+    </p>
+    <p class="text-lg text-gray-600">
+      Outside of coding, I love exploring new technologies, automating workflows,
+      and designing fun side projects.
+    </p>
+  </section>
+
+  <!-- Resume Section -->
+
+  <section id="resume" class="bg-white border-t border-gray-200 py-16">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-semibold mb-6 text-blue-600">My Résumé</h2>
+      <p class="text-gray-600 mb-8">
+        You can view or download my résumé below:
+      </p>
+
+```
+  <!-- Embedded Resume -->
+  <iframe
+    src="resume/BradenWatkinsResume.docx"
+    class="w-full h-96 border rounded-lg shadow-sm"
+    title="Braden Watkins Résumé"
+  ></iframe>
+
+  <p class="mt-6">
+    <a
+      href="resume/BradenWatkinsResume.docx"
+      download
+      class="inline-block bg-blue-600 text-white px-5 py-2 rounded-md hover:bg-blue-700 transition"
+    >
+      Download Résumé
+    </a>
+  </p>
+</div>
+```
+
+  </section>
+
+  <!-- Footer -->
+
+  <footer class="bg-gray-100 border-t border-gray-200 py-6 mt-12">
+    <div class="max-w-5xl mx-auto text-center text-sm text-gray-500">
+      © <span id="year"></span> Braden Watkins. Built with ❤️ and Tailwind CSS.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
 </body>
 </html>
